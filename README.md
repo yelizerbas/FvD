@@ -44,9 +44,9 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
   <img src="readme-images/hangen.png" width="375px" alt="uitomst opdracht 1">
 
   ### Dit ging goed/Heb ik geleerd: 
-  Het was even inkomen in het begin van de opdracht om weer aan de slag te gaan met animatie, maar het is mij gelukt om mijn idee na te kunnen maken. Ik ben erg blij met het eindresultaat. Ik heb best veel geleerd over gradients en hoe je daar mee te werk kunt gaan. Voor deze opdracht was mijn voornaamste doel om gradients beter te begrijpen, en dat is gelukt. Daar ben ik enorm blij mee.
+  Het was even inkomen in het begin van de opdracht om weer aan de slag te gaan met animatie, maar het is mij gelukt om mijn idee na te kunnen maken. Ik heb wel de storyboard tijdens het maken een beetje aangepast. Het vizier komt namelijk van beneden i.p.v links, dat vond ik wat realistischer. Ik ben erg blij met het eindresultaat. Ik heb best veel geleerd over gradients en hoe je daar mee te werk kunt gaan. Voor deze opdracht was mijn voornaamste doel om gradients beter te begrijpen, en dat is gelukt. Daar ben ik enorm blij mee.
 
-  <img src="code-gradient.png" width="375px" alt="top">
+  <img src="readme-images/code-gradient.png" width="375px" alt="top">
 
 
 
