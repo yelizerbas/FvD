@@ -7,12 +7,6 @@
 Markdown is een simpele manier om HTML te schrijven.  
 Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 
-Nb. De standaardstructuur en de spartaanse opmaak van de README.md zijn helemaal prima. Het gaat om de inhoud van je procesverslag. Besteedt de tijd voor pracht en praal aan je website.
-
-Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard open zetten. Fijn om dat steeds voor de relevante stuk(ken) te doen.
-
-
-
 ## Bronnenlijst
   1. -bron 1-
   2. -bron 2-
@@ -32,8 +26,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Je ambitie: 
   Aan deze technieken/punten wil ik werken:
-  - Een animatie smooth laten verlopen
-  - Kijken of ik een 'plaatje' maken in css en niet een png gebruiken
+  - Een animatie goed in elkaar laten verlopen
+  - Kijken of ik een 'plaatje' maken in css met gradients en niet een png gebruiken
  
 </details>
 
@@ -42,23 +36,24 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 ## Opdracht 1 reflectie
 
 <details>
-  <summary>uitwerken bij afronden opdracht (voor week 3)</summary>
+  <summary>uitwerken bij afronden opdracht (voor week 4)</summary>
 
 
   ### Je uitkomst - karakteristiek screenshot(s):
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="uitomst opdracht 1">
-
+  <img src="readme-images/schieten.png" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/hangen.png" width="375px" alt="uitomst opdracht 1">
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatje(s)
+  Het was even inkomen in het begin van de opdracht om weer aan de slag te gaan met animatie, maar het is mij gelukt om mijn idee na te kunnen maken. Ik ben erg blij met het eindresultaat. Ik heb best veel geleerd over gradients en hoe je daar mee te werk kunt gaan. Voor deze opdracht was mijn voornaamste doel om gradients beter te begrijpen, en dat is gelukt. Daar ben ik enorm blij mee.
 
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="top">
+  <img src="code-gradient.png" width="375px" alt="top">
 
 
-  ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatje(s)
 
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="bummer">
+  ### Dit was lastig:
+  Het maken van de vizier was wat lastiger, maar uiteindelijk is het wel gelukt en daar ben ik super trots op. Ik had er namelijk niet echt eerder wat mee gedaan, maar mijn wiskunde skills hebben mij niet in de steek gelaten, dus is het goed gekomen :) 
+
+  <img src="readme-images/code-driehoek.png" width="375px" alt="lastig">
 </details>
 
 
