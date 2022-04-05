@@ -1,18 +1,17 @@
-/* alle radio buttons opzoeken */
-// const optionAll = document.querySelector("#filter-all");
-// const optionActie = document.querySelector("#filter-actie");
-// const optionComedy = document.querySelector("#filter-comedy");
-// const optionHorror = document.querySelector("#filter-horror");
-
 const allMovies = document.querySelectorAll("main ul li");
 
 const filters = document.querySelectorAll("header aside input");
 
 const toggleContainer = document.querySelector("div.btn");
-const savedMovieContainer = document.querySelector("section");
+const savedMovieContainer = document.querySelector("section:nth-of-type(3)");
 const savedMovieList = document.querySelector("section ul");
 
 const favoriteButton = document.querySelectorAll("ul:first-of-type li button");
+
+const favoriteCounter = document.querySelector("section:last-of-type p");
+let favoriteCounterNumber = 0;
+
+
 
 
 function filterList(event){
@@ -31,43 +30,37 @@ function filterList(event){
   // zoek alle li elementen met de class van de gekozen value
   const movieOptions = document.querySelectorAll("." + event.target.value);
 
-
-
   for(let i=0; i<movieOptions.length; i++) {
     movieOptions[i].classList.add("zichtbaar");
   }
-
-
-  // const deLijst = document.querySelector("ul");
-  // const nieuweFilter = event.target.value;
-  // // verwijder de huidige class van de lijst
-  // deLijst.className = "";
-
-  // // de value van die radio button is de nieuwe class
-  // deLijst.classList.add(nieuweFilter);
 }
 
 filterList();
 
 
+
+
+
+
+
 // sla film op, innerHTML wordt gedupliceerd
 function saveMovie(event) {
-  const filmHTML = event.target.parentNode.innerHTML;
+  const filmHTML = event.currentTarget.parentNode;
+
+  filmHTML.classList.add("favoriet");
 
   const liElement = document.createElement("li");
   // classlist voor aparte style opggeslagen film
   liElement.classList.add("favoriet");
-  liElement.innerHTML = filmHTML;
+  liElement.innerHTML = filmHTML.innerHTML;
 
   // voeg film toe aan "opgeslagen" filmlijst
   savedMovieList.appendChild(liElement);
 
-
-
-
-
-// update film favoriet knoppen en eventlisteners
+  // update film favoriet knoppen en eventlisteners
   const removeFavoriteButton = document.querySelectorAll("section ul li button");
+  favoriteCounterNumber++;
+  favoriteCounter.textContent = favoriteCounter.textContent = "FAVORIETEN" + " (" + favoriteCounterNumber + ")" ;
 
   for (let i=0; i<removeFavoriteButton.length; i++) {
     removeFavoriteButton[i].addEventListener("click", removeMovie);
@@ -75,14 +68,18 @@ function saveMovie(event) {
 }
 
 function removeMovie(event){
-  event.target.parentNode.remove();
+  event.currentTarget.parentNode.remove();
+  favoriteCounterNumber--;
+  favoriteCounter.textContent = "FAVORIETEN" + " (" + favoriteCounterNumber + ")";
 }
-
-
 
 for (let i=0; i<favoriteButton.length; i++) {
   favoriteButton[i].addEventListener("click", saveMovie);
 }
+
+
+
+
 
 // function menu
 function slide() {

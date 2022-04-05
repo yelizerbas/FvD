@@ -1,16 +1,5 @@
 /********************************************
 *********************************************
-**************vragen en to do****************
-*********************************************
-********************************************/
-/* 
-	animaties
-	logo
-*/
-
-
-/********************************************
-*********************************************
 *****************ALGEMEEN********************
 *********************************************
 ********************************************/
@@ -49,6 +38,7 @@ body {
 *********************************************
 ********************************************/
 label {
+	cursor: pointer;
 	margin-top: -2em;
 	color: var(--color-black);
 	font-weight: bold;
@@ -85,18 +75,6 @@ header img:first-of-type {
 *****************FILTEREN********************
 *********************************************
 ********************************************/
-/* ul.actie li:not(.actieFilm) {
-	display: none;
-}
-  
-ul.comedy li:not(.comedyFilm) {
-	display: none;
-}
-  
-ul.horror li:not(.horrorFilm) {
-	display: none;
-} */
-
 input[type="radio"] {
     position: absolute;
 	left: -1000em;
@@ -107,7 +85,7 @@ input[type="radio"]:checked+label {
 	text-decoration: underline;
 }
 
-ul li {
+main > ul li {
 	display: none;
 }
 
@@ -117,7 +95,7 @@ ul li.zichtbaar {
 
 /********************************************
 *********************************************
-***************FILM FOTO'S*******************
+********************FILMS********************
 *********************************************
 ********************************************/
 li {
@@ -128,18 +106,13 @@ li {
 	position: relative;
 }
 
-/* ul li button {
-	position: absolute;
-	top: 0;
-	right: 0;
-} */
 
 ul li img {
 	height: 25em;
 	object-fit: contain;
 }
 
-li button {
+ul li button {
 	border: none;
 	position: absolute;
 	top: 0;
@@ -149,21 +122,49 @@ li button {
 	background-color: var(--color-purple);
 }
 
-li button img {
-	width: fit-content;
-}
-/********************************************
-*********************************************
-********************GRID*********************
-*********************************************
-********************************************/
-ul{
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	row-gap: 2em;
-	margin: 0 auto;
+ul li button svg {
+	width: 65%;
 }
 
+ul li button svg path {
+	fill: var(--color-purple);
+	stroke: white;
+}
+
+ul li button:hover{
+	background-color: var(--color-dark-purple);
+}
+
+/********************************************
+*********************************************
+*****************FAVORIETEN******************
+*********************************************
+********************************************/
+section:last-of-type ul {
+	display: flex;
+	gap: 1em;
+	width: 100%;
+	overflow: auto;
+}
+
+section:last-of-type p {
+	display: inline;
+	color: var(--color-white);
+}
+
+section:last-of-type ul li {
+	display: none;
+}
+
+section:last-of-type ul li.favoriet {
+	display: flex;
+	width: fit-content;
+}
+
+ul li.favoriet button svg path {
+	fill: var(--color-white);
+	stroke: var(--color-white)
+}
 
 /********************************************
 *********************************************
@@ -186,6 +187,7 @@ section.showmenu {
 }
 
 section div.btn {
+	cursor: pointer;
 	width:5em;
 	aspect-ratio:2/.3;
 	position: absolute;
@@ -194,6 +196,98 @@ section div.btn {
 	border-radius: 5px;
 	color: var(--color-white);
 	background-color: var(--color-white); 
+}
+
+/********************************************
+*********************************************
+***************BLOB ANIMATIE*****************
+*********************************************
+********************************************/
+@keyframes draaien{
+	0% {
+	  transform:rotate(0turn);
+	}
+	100% {
+	  transform:rotate(1turn);
+	}
+  }
+
+  @keyframes blob {
+	0% {
+	  border-radius: 30% 50% 70% 30% / 40% 60% 80% 40%;
+	}
+	20% {
+	  border-radius:40% 60% 30% 60% / 50% 60% 30% 40%;
+	}
+	40% {
+	  border-radius:50% 40% 45% 40% / 55% 70% 20% 30%;
+	}
+	60% {
+	  border-radius:60% 40% 60% 35% / 50% 35% 65% 40%;
+	}
+	80% {
+	  border-radius:40% 60% 30% 40% / 20% 70% 30% 50%;
+	}
+	100% {
+	  border-radius: 30% 50% 70% 30% / 40% 60% 80% 40%;
+	}
+  }
+
+  section.blob{
+	  z-index: -100;
+  }
+  
+  section.blob div {
+	width:9em; height:9em;
+	background-color: var(--color-purple);
+	animation:blob 10s linear infinite paused, draaien 40s linear infinite paused;
+  }
+  
+  section.blob div {
+	animation-play-state:running;
+	position: relative;
+  }
+
+  section div.blob2 {
+	position: relative;
+  }
+
+/********************************************
+*********************************************
+*************ANIMATIE HARTJE*****************
+*********************************************
+********************************************/
+@keyframes hartslag{
+	0%{
+	  transform: scale(1);
+	}
+	5%{
+	  transform: scale(.7);
+	}
+	10%{
+	  transform: scale(1.2);
+	}
+	15%{
+	  transform: scale(.7);
+	}
+	20%{
+	  transform: scale(1.2);
+	}
+	25%{
+	  transform: scale(.7);
+	}
+	30%{
+	  transform: scale(1);
+	}
+	100%{
+	  transform: scale(1);
+	}
+  }
+
+ul li.favoriet button svg {
+	animation-name: hartslag;
+	animation-duration: 2s;
+	animation-iteration-count:1;
 }
 
 /********************************************
@@ -214,13 +308,41 @@ section div.btn {
 *********************************************
 ********************************************/
 @media only screen and (max-width: 767px) {
-	ul{
-		width: fit-content;
+	label{
+		margin-top: 2em;
+		margin-bottom: 1em;
+		color: var(--color-black);
+	}
+	main > ul{
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		row-gap: 2em;
 		margin: 0 auto;
+		width: fit-content;
 	}
 
 	ul li img {
 		height: 14em;
+		margin-left: 1em;
+	}
+	section.blob div {
+		margin-top: -10em;
+		margin-left: 1em;
+	  }
+	
+	section div.blob2 {
+		margin-top: -25em;
+		margin-left: 65%;
+	  }
+	  section:last-of-type ul {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		row-gap: 2em;
+		margin-top: 1.3em;
+	}
+
+	section:last-of-type p {
+		font-size: 1.1em;
 	}
 }
 
@@ -228,7 +350,7 @@ section div.btn {
   @media only screen and (min-width: 768px) and (max-width: 1200px) {
 	
 	label{
-		margin-top: -25%;
+		margin-top: -15%;
 		font-size: 1.7em;
 		color: var(--color-white);
 	} 
@@ -242,16 +364,40 @@ section div.btn {
 		font-size: 1.2em;
 	}
 
-	ul{
+	ul.all{
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
+		gap: 1em;
 	}
 
 	ul li img {
-		margin-top: 4em;
+		/* margin-top: 3em; */
+		height: 20em;
+		object-fit: contain;
+		margin-left: 1em;
 	}
 	section div.btn {
 		margin-left: 45%;
+	}
+	section.blob div {
+		margin-top: -12em;
+		margin-left: 2em;
+	  }
+
+	  section:last-of-type ul {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1em;
+		margin-top: 1.3em;
+	}
+	
+	  section div.blob2 {
+		margin-top: -30em;
+		margin-left: 65%;
+	  }
+	  section:last-of-type p {
+		font-size: 1.6em;
+		margin-left: .3em;
 	}
 }
 
@@ -286,63 +432,32 @@ section div.btn {
 		height: 20em;
 	}
 
-	p{
+	p {
 		margin-bottom: 8em;
 	}
 	section div.btn {
-		margin-left: 45%;
+		margin-left: 48%;
 	}
+
+	ul {
+		margin-top: 2em;
+		margin-left: 3em;
+	}
+	section.blob div {
+		margin-top: -12em;
+		margin-left: 2em;
+	  }
+	
+	  section div.blob2 {
+		margin-top: -16em;
+		margin-left: 70%;
+	  }
+	  section:last-of-type ul {
+		flex-direction: column;
+	}
+	  section:last-of-type p {
+		font-size: 1.8em;
+		margin-left: .5em;
+	}
+	
 }
-
-
-
-/********************************************
-*********************************************
-***************BLOB ANIMATIE*****************
-*********************************************
-********************************************/
-/* @keyframes draaien{
-	0% {
-	  transform:rotate(0turn);
-	}
-	100% {
-	  transform:rotate(1turn);
-	}
-  }
-
-  @keyframes blob {
-	0% {
-	  border-radius: 30% 50% 70% 30% / 40% 60% 80% 40%;
-	}
-	20% {
-	  border-radius:40% 60% 30% 60% / 50% 60% 30% 40%;
-	}
-	40% {
-	  border-radius:50% 40% 45% 40% / 55% 70% 20% 30%;
-	}
-	60% {
-	  border-radius:60% 40% 60% 35% / 50% 35% 65% 40%;
-	}
-	80% {
-	  border-radius:40% 60% 30% 40% / 20% 70% 30% 50%;
-	}
-	100% {
-	  border-radius: 30% 50% 70% 30% / 40% 60% 80% 40%;
-	}
-  }
-  
-  section.blob div {
-	width:6em; height:6em;
-	background-color: var(--color-purple);
-	animation:blob 10s linear infinite paused, draaien 40s linear infinite paused;
-	z-index: -1;
-  }
-  
-  section.blob div {
-	animation-play-state:running;
-  } */
-
-
-  div.opslaan {
-	  width: 100%;
-  }
