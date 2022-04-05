@@ -3,13 +3,8 @@
 
 **De opdrachten:** [opdracht 1](opdracht1/index.html) en [opdracht 2](opdracht2/index.html)
 
-
-Markdown is een simpele manier om HTML te schrijven.  
-Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
-
 ## Bronnenlijst
   1. https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients
-
 
 
 ## Opdracht 1 plan
@@ -63,49 +58,16 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 
   ### Je ontwerp:
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="ontwerp opdracht 2">
-
+  <img src="readme-images/desktop.png" width="375px" alt="ontwerp opdracht 2">
+  <img src="readme-images/telefoon-ipad.png" width="375px" alt="ontwerp opdracht 2">  
 
   ### Je ambitie: 
   Aan deze technieken/punten wil ik werken:
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - Werken met breakpoints
+  - Beter worden in responsive coderen
+  - verschillende interacties kunnen toevoegen
+
 </details>
-
-
-
-## Opdracht 2 test
-
-<details>
-  <summary>uitwerken na testen (week 6/7)</summary>
-
-  Neem minimaal 5 bevindingen op:
-
-
-
-  ### Bevinding 1:
-  Omschrijving van wat er nog niet orde was (tekst en afbeeding(en)).
-
-  #### oplossing:
-  Beschrijving hoe je het hebt hebt opgelost of als het niet gelukt is hoe je het zou oplossen (tekst en afbeeding(en)).
-
-
-
-  ### Bevinding 2:
-  Omschrijving van wat er nog niet orde was (tekst en afbeeding(en)).
-
-  #### oplossing:
-  Beschrijving hoe je het hebt hebt opgelost of als het niet gelukt is hoe je het zou oplossen (tekst en afbeeding(en)).
-
-
-
-  ### Bevinding 3:
-  ...
-</details>
-
-
 
 ## Opdracht 2 reflectie
 
@@ -113,17 +75,17 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
   <summary>uitwerken bij afronden opdracht (voor week 8)</summary>
 
   ### Je uitkomst - karakteristiek screenshot(s):
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="uitkomst opdracht 2">
+  <img src="readme-images/uitkomst.png" width="375px" alt="uitkomst opdracht 2">
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatje(s)
+  Werken met breakpoitns ging erg goed. Ik had het nooit eerder gedaan, dus het was even nieuw, maar nu heb ik het wel onder de knie. Ik vind responsive design best lastig. Dus ik heb hier echt super veel van geleerd, waar ik erg blij mee ben :)
 
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="top">
+  <img src="readme-images/breakpoints.png" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatje(s)
+  Ik had graag meer verschillende dingen willen toevoegen om alles te kunnen besturen. Bijvoorbeeld stemherkenning of met je vinger kunnen swipen. Dit is mij helaas niet gelukt door tijdsnood. Het enige wat ik nu heb is met de muis en met je toetsenbord. Ook is het niet gelukt om mijn design helemaal na te maken. Di/t vind ik best jammer, want ik vind mijn design best leuk.
 
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="bummer">
+  (Zie afbeelding 1, 2 en 3)
 </details>
