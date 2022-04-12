@@ -1,3 +1,8 @@
+///////////////////////////////////
+///////////////////////////////////
+//////////alle constanten//////////
+///////////////////////////////////
+///////////////////////////////////
 const bodyElement = document.querySelector("body");
 
 const allMovies = document.querySelectorAll("main ul li");
@@ -13,7 +18,11 @@ const favoriteCounter = document.querySelector("section:last-of-type p span");
 const noFavMessage = document.querySelector("section:last-of-type>p");
 
 
-
+///////////////////////////////////
+///////////////////////////////////
+////////alle films inladen/////////
+///////////////////////////////////
+///////////////////////////////////
 function filterList(event) {
   //alle movies onzichtbaar
   for(let i=0; i<allMovies.length; i++) {
@@ -41,8 +50,12 @@ function filterList(event) {
 filterList();
 
 
-
-// sla film op, innerHTML wordt gedupliceerd
+///////////////////////////////////
+///////////////////////////////////
+////film opslaan en verwijderen////
+///////////////////////////////////
+///////////////////////////////////  
+// sla film op, innerHTML van de li wordt gedupliceerd
 function saveMovie(event) {
   // li element wordt opgeslagen
   const filmHTML = event.currentTarget.parentNode;
@@ -51,7 +64,7 @@ function saveMovie(event) {
   if(filmHTML.classList.contains("favoriet")) {
       document.querySelector("section:last-of-type ul li."+filmHTML.classList[0]).remove();
       filmHTML.classList.remove("favoriet");
-      //parseInt() om tekst uit favoriet counter als number te krijgen.
+      //parseInt() om tekst uit favoriet counter als number te krijgen
       favoriteCounter.textContent = parseInt(favoriteCounter.textContent) - 1;
       if(favoriteCounter.textContent == 0) {
         noFavMessage.classList.add("geenfavo");
@@ -97,8 +110,6 @@ function togglePopup() {
   bodyElement.classList.toggle("showmenu");
 }
 
-
-
 for (let i=0; i<favoriteButton.length; i++) {
   favoriteButton[i].addEventListener("click", saveMovie);
 }
@@ -108,9 +119,6 @@ toggleContainerButton.addEventListener("click", togglePopup);
 for (let i=0; i<filters.length; i++) {
   filters[i].addEventListener("click", filterList);
 }
-
-
-
 
 ///////////////////////////////////
 ///////////////////////////////////
@@ -136,20 +144,3 @@ toggleButton.addEventListener("click", () => {
     element.classList = "darkmode";
    }
   });
-
-
-
-  // toggleButton.addEventListener("click", () => {
-  //   const element = document.body;
-  // //  element.classList.toggle("darkmode");
-
-  //  if(element.classList == "darkmode"){
-  //   element.classList = "lightmode";
-  //  } 
-  //  else if (element.classList == "lightmode"){
-  //   element.classList = "darkmode";
-  //  }
-  //  else{
-  //   element.classList = "darkmode";
-  //  }
-  // });
