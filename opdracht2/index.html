@@ -13,129 +13,164 @@
 
 <body>
 
-<header>
-	<img src="images/header.svg" alt="header">
-	<aside>
-		<input type="radio" name="filter" value="all" id="filter-all" checked>
-		<label for="filter-all">alle films</label>
-		
-		<input type="radio" name="filter" value="actie" id="filter-actie">
-		<label for="filter-actie">actie</label>
+	<header>
+		<button>Darkmode</button>
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.634 50.639">
+			<path d="M26.28,55.639H8.6a3.045,3.045,0,0,0,.023-.375v-3a3,3,0,0,0-6,0v3a3.045,3.045,0,0,0,.023.375H2a2,2,0,0,1-2-2V7A2,2,0,0,1,2,5h.844a2.982,2.982,0,0,0-.218,1.125v3a3,3,0,0,0,6,0v-3A2.984,2.984,0,0,0,8.409,5H26.475a2.982,2.982,0,0,0-.218,1.125v3a3,3,0,1,0,6,0v-3A2.985,2.985,0,0,0,32.04,5h1.594a2,2,0,0,1,2,2V53.638a2,2,0,0,1-2,2h-1.4a3.046,3.046,0,0,0,.023-.375v-3a3,3,0,1,0-6,0v3a3.047,3.047,0,0,0,.023.375Zm2.977-21.757a3,3,0,0,0-3,3v3a3,3,0,0,0,6,0v-3A3,3,0,0,0,29.257,33.882Zm-23.63,0a3,3,0,0,0-3,3v3a3,3,0,0,0,6,0v-3A3,3,0,0,0,5.627,33.882ZM29.257,18.5a3,3,0,0,0-3,3v3a3,3,0,0,0,6,0v-3A3,3,0,0,0,29.257,18.5Zm-23.63,0a3,3,0,0,0-3,3v3a3,3,0,0,0,6,0v-3A3,3,0,0,0,5.627,18.5Z" transform="translate(0 -5)"/>
+		  </svg>
+		  
 
-		<input type="radio" name="filter" value="comedy" id="filter-comedy">
-		<label for="filter-comedy">comedy</label>
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375.034 99.079" preserveAspectRatio="none">
+			<path
+				d="M-41.921,63.272s20.68,38.758,65.967,29.816S96.8,68.754,143.3,68.754s66.961,25.865,116.271,24.334,73.246-36.1,73.246-36.1l.045-61.58L-42.172-4.652Z"
+				transform="translate(42.172 4.652)" />
+		</svg>
+		<aside>
+			<input type="radio" name="filter" value="all" id="filter-all" checked>
+			<label for="filter-all">alle films</label>
 
-		<input type="radio" name="filter" value="horror" id="filter-horror">
-		<label for="filter-horror">horror</label>
-	</aside>
-</header>
+			<input type="radio" name="filter" value="actie" id="filter-actie">
+			<label for="filter-actie">actie</label>
+
+			<input type="radio" name="filter" value="comedy" id="filter-comedy">
+			<label for="filter-comedy">comedy</label>
+
+			<input type="radio" name="filter" value="horror" id="filter-horror">
+			<label for="filter-horror">horror</label>
+		</aside>
+	</header>
 
 	<main>
-		<ul class="all">
-			<li class="actie">
+		<ul class="moviecarousel">
+			<li class="uncharted actie">
 				<button>
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33.092 29.055">
-						<path d="M31.479,6.933a8.312,8.312,0,0,0-11.758,0l-1.6,1.6-1.6-1.6A8.314,8.314,0,1,0,4.758,18.692l1.6,1.6L18.119,32.052,29.877,20.294l1.6-1.6a8.312,8.312,0,0,0,0-11.758Z" transform="translate(-1.573 -3.747)"/>
-					  </svg>
+						<path
+							d="M31.479,6.933a8.312,8.312,0,0,0-11.758,0l-1.6,1.6-1.6-1.6A8.314,8.314,0,1,0,4.758,18.692l1.6,1.6L18.119,32.052,29.877,20.294l1.6-1.6a8.312,8.312,0,0,0,0-11.758Z"
+							transform="translate(-1.573 -3.747)" />
+					</svg>
+
 				</button>
 				<img src="images/uncharted.jpeg" alt="uncharted film poster">
 				<p>Uncharted</p>
 			</li>
-			<li class="comedy" >
+			<li class="borat comedy">
 				<button>
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33.092 29.055">
-						<path d="M31.479,6.933a8.312,8.312,0,0,0-11.758,0l-1.6,1.6-1.6-1.6A8.314,8.314,0,1,0,4.758,18.692l1.6,1.6L18.119,32.052,29.877,20.294l1.6-1.6a8.312,8.312,0,0,0,0-11.758Z" transform="translate(-1.573 -3.747)"/>
-					  </svg>
+						<path
+							d="M31.479,6.933a8.312,8.312,0,0,0-11.758,0l-1.6,1.6-1.6-1.6A8.314,8.314,0,1,0,4.758,18.692l1.6,1.6L18.119,32.052,29.877,20.294l1.6-1.6a8.312,8.312,0,0,0,0-11.758Z"
+							transform="translate(-1.573 -3.747)" />
+					</svg>
 				</button>
 				<img src="images/borat.jpg" alt="borat film poster">
 				<p>Borat</p>
 			</li>
-			<li class="horror" >
+			<li class="insidious horror">
 				<button>
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33.092 29.055">
-						<path d="M31.479,6.933a8.312,8.312,0,0,0-11.758,0l-1.6,1.6-1.6-1.6A8.314,8.314,0,1,0,4.758,18.692l1.6,1.6L18.119,32.052,29.877,20.294l1.6-1.6a8.312,8.312,0,0,0,0-11.758Z" transform="translate(-1.573 -3.747)"/>
-					  </svg>
+						<path
+							d="M31.479,6.933a8.312,8.312,0,0,0-11.758,0l-1.6,1.6-1.6-1.6A8.314,8.314,0,1,0,4.758,18.692l1.6,1.6L18.119,32.052,29.877,20.294l1.6-1.6a8.312,8.312,0,0,0,0-11.758Z"
+							transform="translate(-1.573 -3.747)" />
+					</svg>
 				</button>
 				<img src="images/insidious.jpg" alt="insidious film poster">
 				<p>Insidious</p>
 			</li>
-			<li class="actie">
+			<li class="theBatman actie">
 				<button>
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33.092 29.055">
-						<path d="M31.479,6.933a8.312,8.312,0,0,0-11.758,0l-1.6,1.6-1.6-1.6A8.314,8.314,0,1,0,4.758,18.692l1.6,1.6L18.119,32.052,29.877,20.294l1.6-1.6a8.312,8.312,0,0,0,0-11.758Z" transform="translate(-1.573 -3.747)"/>
-					  </svg>
+						<path
+							d="M31.479,6.933a8.312,8.312,0,0,0-11.758,0l-1.6,1.6-1.6-1.6A8.314,8.314,0,1,0,4.758,18.692l1.6,1.6L18.119,32.052,29.877,20.294l1.6-1.6a8.312,8.312,0,0,0,0-11.758Z"
+							transform="translate(-1.573 -3.747)" />
+					</svg>
 				</button>
 				<img src="images/the-batman.jpeg" alt="the batman film poster">
 				<p>The Batman</p>
 			</li>
-			<li class="comedy" >
+			<li class="meanGirls comedy">
 				<button>
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33.092 29.055">
-						<path d="M31.479,6.933a8.312,8.312,0,0,0-11.758,0l-1.6,1.6-1.6-1.6A8.314,8.314,0,1,0,4.758,18.692l1.6,1.6L18.119,32.052,29.877,20.294l1.6-1.6a8.312,8.312,0,0,0,0-11.758Z" transform="translate(-1.573 -3.747)"/>
-					  </svg>
+						<path
+							d="M31.479,6.933a8.312,8.312,0,0,0-11.758,0l-1.6,1.6-1.6-1.6A8.314,8.314,0,1,0,4.758,18.692l1.6,1.6L18.119,32.052,29.877,20.294l1.6-1.6a8.312,8.312,0,0,0,0-11.758Z"
+							transform="translate(-1.573 -3.747)" />
+					</svg>
 				</button>
 				<img src="images/Mean-Girls.jpeg" alt="mean girls film poster">
 				<p>Mean Girls</p>
 			</li>
-			<li class="horror" >
+			<li class="scream horror">
 				<button>
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33.092 29.055">
-						<path d="M31.479,6.933a8.312,8.312,0,0,0-11.758,0l-1.6,1.6-1.6-1.6A8.314,8.314,0,1,0,4.758,18.692l1.6,1.6L18.119,32.052,29.877,20.294l1.6-1.6a8.312,8.312,0,0,0,0-11.758Z" transform="translate(-1.573 -3.747)"/>
-					  </svg>
+						<path
+							d="M31.479,6.933a8.312,8.312,0,0,0-11.758,0l-1.6,1.6-1.6-1.6A8.314,8.314,0,1,0,4.758,18.692l1.6,1.6L18.119,32.052,29.877,20.294l1.6-1.6a8.312,8.312,0,0,0,0-11.758Z"
+							transform="translate(-1.573 -3.747)" />
+					</svg>
 				</button>
 				<img src="images/scream.webp" alt="scream film poster">
 				<p>Scream</p>
 			</li>
-			<li class="actie">
+			<li class="noWayHome actie">
 				<button>
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33.092 29.055">
-						<path d="M31.479,6.933a8.312,8.312,0,0,0-11.758,0l-1.6,1.6-1.6-1.6A8.314,8.314,0,1,0,4.758,18.692l1.6,1.6L18.119,32.052,29.877,20.294l1.6-1.6a8.312,8.312,0,0,0,0-11.758Z" transform="translate(-1.573 -3.747)"/>
-					  </svg>
+						<path
+							d="M31.479,6.933a8.312,8.312,0,0,0-11.758,0l-1.6,1.6-1.6-1.6A8.314,8.314,0,1,0,4.758,18.692l1.6,1.6L18.119,32.052,29.877,20.294l1.6-1.6a8.312,8.312,0,0,0,0-11.758Z"
+							transform="translate(-1.573 -3.747)" />
+					</svg>
 				</button>
 				<img src="images/spiderman.jpeg" alt=" No way home filmposter">
 				<p>No Way Home</p>
 			</li>
-			<li class="comedy" >
+			<li class="whiteChicks comedy">
 				<button>
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33.092 29.055">
-						<path d="M31.479,6.933a8.312,8.312,0,0,0-11.758,0l-1.6,1.6-1.6-1.6A8.314,8.314,0,1,0,4.758,18.692l1.6,1.6L18.119,32.052,29.877,20.294l1.6-1.6a8.312,8.312,0,0,0,0-11.758Z" transform="translate(-1.573 -3.747)"/>
-					  </svg>
+						<path
+							d="M31.479,6.933a8.312,8.312,0,0,0-11.758,0l-1.6,1.6-1.6-1.6A8.314,8.314,0,1,0,4.758,18.692l1.6,1.6L18.119,32.052,29.877,20.294l1.6-1.6a8.312,8.312,0,0,0,0-11.758Z"
+							transform="translate(-1.573 -3.747)" />
+					</svg>
 				</button>
 				<img src="images/white-chicks.jpg" alt="White Chicks film poster">
 				<p>White Chicks</p>
 			</li>
-			<li class="horror" >
+			<li class="initiation horror">
 				<button>
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33.092 29.055">
-						<path d="M31.479,6.933a8.312,8.312,0,0,0-11.758,0l-1.6,1.6-1.6-1.6A8.314,8.314,0,1,0,4.758,18.692l1.6,1.6L18.119,32.052,29.877,20.294l1.6-1.6a8.312,8.312,0,0,0,0-11.758Z" transform="translate(-1.573 -3.747)"/>
-					  </svg>
+						<path
+							d="M31.479,6.933a8.312,8.312,0,0,0-11.758,0l-1.6,1.6-1.6-1.6A8.314,8.314,0,1,0,4.758,18.692l1.6,1.6L18.119,32.052,29.877,20.294l1.6-1.6a8.312,8.312,0,0,0,0-11.758Z"
+							transform="translate(-1.573 -3.747)" />
+					</svg>
 				</button>
 				<img src="images/initation.jpg" alt="initation film poster">
 				<p>Initation</p>
 			</li>
-			<li class="actie">
+			<li class="noTimeToDie actie">
 				<button>
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33.092 29.055">
-						<path d="M31.479,6.933a8.312,8.312,0,0,0-11.758,0l-1.6,1.6-1.6-1.6A8.314,8.314,0,1,0,4.758,18.692l1.6,1.6L18.119,32.052,29.877,20.294l1.6-1.6a8.312,8.312,0,0,0,0-11.758Z" transform="translate(-1.573 -3.747)"/>
-					  </svg>
+						<path
+							d="M31.479,6.933a8.312,8.312,0,0,0-11.758,0l-1.6,1.6-1.6-1.6A8.314,8.314,0,1,0,4.758,18.692l1.6,1.6L18.119,32.052,29.877,20.294l1.6-1.6a8.312,8.312,0,0,0,0-11.758Z"
+							transform="translate(-1.573 -3.747)" />
+					</svg>
 				</button>
 				<img src="images/no-time-to-die.jpeg" alt="no time to die film poster">
 				<p>No Time To Die</p>
 			</li>
-			<li class="comedy" >
+			<li class="clueless comedy">
 				<button>
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33.092 29.055">
-						<path d="M31.479,6.933a8.312,8.312,0,0,0-11.758,0l-1.6,1.6-1.6-1.6A8.314,8.314,0,1,0,4.758,18.692l1.6,1.6L18.119,32.052,29.877,20.294l1.6-1.6a8.312,8.312,0,0,0,0-11.758Z" transform="translate(-1.573 -3.747)"/>
-					  </svg>
+						<path
+							d="M31.479,6.933a8.312,8.312,0,0,0-11.758,0l-1.6,1.6-1.6-1.6A8.314,8.314,0,1,0,4.758,18.692l1.6,1.6L18.119,32.052,29.877,20.294l1.6-1.6a8.312,8.312,0,0,0,0-11.758Z"
+							transform="translate(-1.573 -3.747)" />
+					</svg>
 				</button>
 				<img src="images/clueless.jpg" alt="clueless film poster">
 				<p>Clueless</p>
 			</li>
-			<li class="horror" >
+			<li class="theTwin horror">
 				<button>
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33.092 29.055">
-						<path d="M31.479,6.933a8.312,8.312,0,0,0-11.758,0l-1.6,1.6-1.6-1.6A8.314,8.314,0,1,0,4.758,18.692l1.6,1.6L18.119,32.052,29.877,20.294l1.6-1.6a8.312,8.312,0,0,0,0-11.758Z" transform="translate(-1.573 -3.747)"/>
-					  </svg>
+						<path
+							d="M31.479,6.933a8.312,8.312,0,0,0-11.758,0l-1.6,1.6-1.6-1.6A8.314,8.314,0,1,0,4.758,18.692l1.6,1.6L18.119,32.052,29.877,20.294l1.6-1.6a8.312,8.312,0,0,0,0-11.758Z"
+							transform="translate(-1.573 -3.747)" />
+					</svg>
 				</button>
 				<img src="images/the-twin.jpeg" alt="the twin film poster">
 				<p>The Twin</p>
@@ -143,20 +178,19 @@
 		</ul>
 	</main>
 
-	<section class="blob">
-		<div></div>
-	  </section>
+	<div class="blob"></div>
 
-	  <section class="blob">
-		<div class="blob2"></div>
-	  </section>
+	<div class="blob"></div>
 
-	
+
 
 	<section>
-		<div class="btn"> </div>
-		<p>FAVORIETEN (0)</p>
-		<ul></ul>
+		<article>
+			<button aria-label="laat favorieten zien"></button>
+			<p>FAVORIETEN (<span>0</span>)</p>
+		</article>
+		<ul class="moviecarousel"></ul>
+		<p class="geenfavo">Je hebt nog geen films opgeslagen. Klik op het hartje om films op te slaan!</p>
 	</section>
 
 	<script src="scripts/script.js"></script>

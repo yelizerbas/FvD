@@ -6,458 +6,578 @@
 *,
 *::after,
 *::before {
-    box-sizing: border-box;
+	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-    user-select: none;
-    -webkit-user-select: none;
-    -webkit-user-drag: none;
+	user-select: none;
+	-webkit-user-select: none;
+	-webkit-user-drag: none;
+	outline-color: var(--color-focus);
 }
 
-body {
-	background-color:var(--color-background);
-	font-family: Arial, Helvetica, sans-serif;
-  }
-
-/********************************************
-*********************************************
-**************CUSTOM PROPERTIES**************
-*********************************************
-********************************************/
 :root {
 	--color-background:#ffffff;
 	--color-black:#000000;
 	--color-white:#ffffff;
 	--color-purple: #5A6BEF;
 	--color-dark-purple: #4c5ac7;
+	--color-darker-purple: #313c8a;
+	--color-focus: red;
 }
 
-/********************************************
-*********************************************
-*******************TEKST********************
-*********************************************
-********************************************/
-label {
-	cursor: pointer;
-	margin-top: -2em;
-	color: var(--color-black);
-	font-weight: bold;
-	text-transform: uppercase;
-	font-size: 1em;
-} 
+body {
+	background-color: var(--color-background);
+	font-family: Arial, Helvetica, sans-serif;
+}
 
 p {
 	color: var(--color-black);
-	font-weight: bold;
-	font-size: .9em;
-	text-align: center;
-	position: relative;
-	width: 100%;
 }
+
+
 
 /********************************************
 *********************************************
 *******************HEADER********************
 *********************************************
 ********************************************/
-header aside {
-	display: flex;
-	justify-content: space-evenly;
+body header>svg:first-of-type {
+	position: absolute;
+	width: 3em;
+	top: 3em;
+	left: 3em;
 }
 
-header img:first-of-type {
+body header>svg:first-of-type path {
+	fill: var(--color-white);
+}
+
+body header>svg:last-of-type {
 	width: 100%;
-	height: auto;
+	max-height: 20em;
 }
 
-/********************************************
-*********************************************
-*****************FILTEREN********************
-*********************************************
-********************************************/
-input[type="radio"] {
-    position: absolute;
+body header>svg:last-of-type path {
+	fill: var(--color-purple);
+}
+
+body header aside {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	gap: 1.5em;
+	position: absolute;
+	top: 4em;
+	width: 100%;
+}
+
+body header aside label {
+	cursor: pointer;
+	color: var(--color-white);
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 2em;
+	transition: all .2s ease-in-out;
+}
+
+body header aside input[type="radio"] {
+	position: fixed;
 	left: -1000em;
 }
 
-input[type="radio"]:checked+label {
-	color: var(--color-purple);
+body header aside input[type="radio"]:checked+label {
 	text-decoration: underline;
 }
 
-main > ul li {
-	display: none;
+body header aside label:hover {
+	color: var(--color-darker-purple);
 }
 
-ul li.zichtbaar {
-	display: list-item;
+body header>button {
+	border: none;
+	border-radius: 94% 49% 46% 35% / 50% 59% 72% 79%;
+	padding: .5em;
+	color: var(--color-white);
+	background-color: var(--color-dark-purple);
+	position: absolute;
+	z-index: +100;
 }
 
 /********************************************
 *********************************************
-********************FILMS********************
+**************ALGEMENE STYLING***************
 *********************************************
 ********************************************/
-li {
+ul.moviecarousel {
 	list-style-type: none;
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	position: relative;
 }
 
+ul.moviecarousel li {
+	position: relative;
+	width: fit-content;
+}
 
-ul li img {
-	height: 25em;
+ul.moviecarousel li img {
 	object-fit: contain;
 }
 
-ul li button {
+ul.moviecarousel li button {
+	cursor: pointer;
 	border: none;
+	border-radius: 78% 39% 89% 77% / 100% 41% 73% 100% ;
 	position: absolute;
 	top: 0;
 	right: 0;
 	width: 4em;
 	height: 4em;
 	background-color: var(--color-purple);
+	transition: all .2s ease-in-out;
 }
 
-ul li button svg {
+ul.moviecarousel li button svg {
 	width: 65%;
 }
 
-ul li button svg path {
+ul.moviecarousel li button svg path {
 	fill: var(--color-purple);
 	stroke: white;
 }
 
-ul li button:hover{
-	background-color: var(--color-dark-purple);
-}
-
-/********************************************
-*********************************************
-*****************FAVORIETEN******************
-*********************************************
-********************************************/
-section:last-of-type ul {
-	display: flex;
-	gap: 1em;
-	width: 100%;
-	overflow: auto;
-}
-
-section:last-of-type p {
-	display: inline;
-	color: var(--color-white);
-}
-
-section:last-of-type ul li {
-	display: none;
-}
-
-section:last-of-type ul li.favoriet {
-	display: flex;
-	width: fit-content;
-}
-
-ul li.favoriet button svg path {
+ul.moviecarousel li.favoriet button svg path,
+section:last-of-type ul li button svg path {
 	fill: var(--color-white);
 	stroke: var(--color-white)
 }
 
+ul.moviecarousel li button:hover,
+ul.moviecarousel li button:focus {
+	background-color: var(--color-dark-purple);
+}
+
+ul.moviecarousel li p {
+	text-align: center;
+	font-weight: bold;
+}
+
+
+
 /********************************************
 *********************************************
-*******************SLIDER********************
+**************ALLE FILMS PAGINA**************
 *********************************************
 ********************************************/
-section {
+main>ul li {
+	display: none;
+}
+
+main ul li.zichtbaar {
+	display: list-item;
+}
+
+
+
+/********************************************
+*********************************************
+***************FAVORIETEN DRAW***************
+*********************************************
+********************************************/
+section:last-of-type {
 	position: fixed;
 	bottom: 0;
 	width: 100%;
-	height: 75%;
-    background: var(--color-dark-purple);
-    transform: translateY(90%);
-    transition: all .8s;
+	height: 60%;
+	background: var(--color-dark-purple);
+	transform: translateY(calc(100% - 3.2em));
+	transition: all .8s;
 	z-index: 50;
 }
 
-section.showmenu {
-    transform: translateY(0%);
+body.showmenu {
+	overflow-y: hidden;
 }
 
-section div.btn {
-	cursor: pointer;
-	width:5em;
-	aspect-ratio:2/.3;
+body.showmenu section:last-of-type {
+	transform: translateY(0%);
+}
+
+section:last-of-type article {
 	position: absolute;
-	margin-left: 40%;
-	margin-top: 1em;
+	top: .2em;
+	width: 100%;
+	text-align: center;
+	height: 3em;
+}
+
+section:last-of-type article button {
+	cursor: pointer;
+	width: 5em;
+	aspect-ratio: 2/.3;
+	margin-bottom: .2em;
 	border-radius: 5px;
+	border: solid 2px var(--color-white);
+	background-color: var(--color-white);
+	transition: all .2s ease-in-out;
+	outline: 0;
+}
+
+section:last-of-type article button:focus-visible {
+	transform: scale(1.2);
+	background-color: var(--color-focus);
+}
+
+section:last-of-type article button:hover {
+	transform: scale(1.2);
+}
+
+section:last-of-type article p {
 	color: var(--color-white);
-	background-color: var(--color-white); 
+	text-align: start;
+	padding-left: 1em;
+	font-weight: bold;
 }
 
-/********************************************
-*********************************************
-***************BLOB ANIMATIE*****************
-*********************************************
-********************************************/
-@keyframes draaien{
-	0% {
-	  transform:rotate(0turn);
-	}
-	100% {
-	  transform:rotate(1turn);
-	}
-  }
-
-  @keyframes blob {
-	0% {
-	  border-radius: 30% 50% 70% 30% / 40% 60% 80% 40%;
-	}
-	20% {
-	  border-radius:40% 60% 30% 60% / 50% 60% 30% 40%;
-	}
-	40% {
-	  border-radius:50% 40% 45% 40% / 55% 70% 20% 30%;
-	}
-	60% {
-	  border-radius:60% 40% 60% 35% / 50% 35% 65% 40%;
-	}
-	80% {
-	  border-radius:40% 60% 30% 40% / 20% 70% 30% 50%;
-	}
-	100% {
-	  border-radius: 30% 50% 70% 30% / 40% 60% 80% 40%;
-	}
-  }
-
-  section.blob{
-	  z-index: -100;
-  }
-  
-  section.blob div {
-	width:9em; height:9em;
-	background-color: var(--color-purple);
-	animation:blob 10s linear infinite paused, draaien 40s linear infinite paused;
-  }
-  
-  section.blob div {
-	animation-play-state:running;
-	position: relative;
-  }
-
-  section div.blob2 {
-	position: relative;
-  }
-
-/********************************************
-*********************************************
-*************ANIMATIE HARTJE*****************
-*********************************************
-********************************************/
-@keyframes hartslag{
-	0%{
-	  transform: scale(1);
-	}
-	5%{
-	  transform: scale(.7);
-	}
-	10%{
-	  transform: scale(1.2);
-	}
-	15%{
-	  transform: scale(.7);
-	}
-	20%{
-	  transform: scale(1.2);
-	}
-	25%{
-	  transform: scale(.7);
-	}
-	30%{
-	  transform: scale(1);
-	}
-	100%{
-	  transform: scale(1);
-	}
-  }
-
-ul li.favoriet button svg {
-	animation-name: hartslag;
-	animation-duration: 2s;
-	animation-iteration-count:1;
+section:last-of-type ul {
+	margin-top: 3.2em;
+	overflow: auto;
+	height: calc(100% - 3.2em);
+	padding: 1.5em 2em;
 }
+
+section:last-of-type ul li p{
+	color: var(--color-white);
+}
+
+section:last-of-type>p {
+	display: none;
+	text-align: center;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%);
+	color: var(--color-white);
+}
+
+section:last-of-type>p.geenfavo {
+	display: block;
+}
+
 
 /********************************************
 *********************************************
 *******************DARKMODE******************
 *********************************************
 ********************************************/
+:root body.darkmode {
+	--color-background: #292929;
+	--color-black: #ffffff;
+}
+
+:root body.lightmode {
+	--color-background:#ffffff;
+	--color-black:#000000;
+	--color-white:#ffffff;
+	--color-purple: #5A6BEF;
+	--color-dark-purple: #4c5ac7;
+	--color-darker-purple: #313c8a;
+	--color-focus: red;
+}
+
 @media (prefers-color-scheme: dark) {
 	:root {
 		--color-background: #292929;
 		--color-black: #ffffff;
-   }
+	}
 }
 
 /********************************************
 *********************************************
-*****************BREAKPOINTS*****************
+******************TELEFOON*******************
 *********************************************
 ********************************************/
 @media only screen and (max-width: 767px) {
-	label{
-		margin-top: 2em;
-		margin-bottom: 1em;
+	body>header>svg:first-of-type {
+		position: absolute;
+		width: 3em;
+		left: 50%;
+		transform: translateX(-50%);
+		top: 1.5em;
+	}
+
+	body>header>svg:last-of-type {
+		height: 10em;
+	}
+
+	body>header aside {
+		margin-top: 7em;
+	}
+
+	main {
+		margin-top: 5em;
+	}
+
+	body>header aside label {
+		font-size: .9em;
+	}
+
+	ul.moviecarousel {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);;
+		justify-items: center;
+		margin: 0 auto 4.2em auto;
+	}
+
+	section:last-of-type {
+		height: 75%;
+	}
+
+	body>header aside label {
 		color: var(--color-black);
 	}
-	main > ul{
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		row-gap: 2em;
-		margin: 0 auto;
-		width: fit-content;
-	}
 
-	ul li img {
+	ul.moviecarousel li img {
 		height: 14em;
-		margin-left: 1em;
-	}
-	section.blob div {
-		margin-top: -10em;
-		margin-left: 1em;
-	  }
-	
-	section div.blob2 {
-		margin-top: -25em;
-		margin-left: 65%;
-	  }
-	  section:last-of-type ul {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		row-gap: 2em;
-		margin-top: 1.3em;
 	}
 
-	section:last-of-type p {
-		font-size: 1.1em;
-	}
-}
-
-
-  @media only screen and (min-width: 768px) and (max-width: 1200px) {
-	
-	label{
-		margin-top: -15%;
-		font-size: 1.7em;
-		color: var(--color-white);
-	} 
-
-	input[type="radio"]:checked+label {
-		color: var(--color-white);
-		text-decoration: underline;
+	section:last-of-type article p {
+		font-size: 1em;
 	}
 
-	p {
-		font-size: 1.2em;
+	section:last-of-type>p {
+		font-size: 1.3em;
 	}
 
-	ul.all{
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		gap: 1em;
+	body div.blob {
+		width: 3em;
+		height: 3em;
 	}
 
-	ul li img {
-		/* margin-top: 3em; */
-		height: 20em;
-		object-fit: contain;
-		margin-left: 1em;
-	}
-	section div.btn {
-		margin-left: 45%;
-	}
-	section.blob div {
-		margin-top: -12em;
-		margin-left: 2em;
-	  }
-
-	  section:last-of-type ul {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		gap: 1em;
-		margin-top: 1.3em;
+	body div.blob:first-of-type {
+		left: 3em;
+		top: 37em;
 	}
 	
-	  section div.blob2 {
-		margin-top: -30em;
-		margin-left: 65%;
-	  }
-	  section:last-of-type p {
-		font-size: 1.6em;
-		margin-left: .3em;
+	body div.blob:last-of-type {
+		right: 3em;
+		top: 15em;
+	}
+
+	body>header aside input[type="radio"]:checked+label {
+		color: var(--color-purple);
+	}
+
+	body header>button {
+		font-size: 1em;
+		right: 1em;
+		top: 1em;
 	}
 }
 
 
 
-@media only screen and (min-width: 1201px) {
-	
-	label{
-		margin-top: -20%;
-		font-size: 2em;
-		color: var(--color-white);
-	} 
-
-	input[type="radio"]:checked+label {
-		color: var(--color-white);
-		text-decoration: underline;
-	}
-	
-
-	main ul:first-of-type {
-		display: flex;
-		width: 100%;
-		overflow-x: auto;
-		gap: 3em;
+/********************************************
+*********************************************
+********************IPAD*********************
+*********************************************
+********************************************/
+@media only screen and (min-width: 767px) and (max-width: 1100px) {
+	ul.moviecarousel {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);;
+		justify-items: center;
+		margin: 0 auto 4.2em auto;
 	}
 
-	main ul:first-of-type  li {
-		flex-shrink: 0;
-	}
-	
-	main ul:first-of-type  li img {
-		height: 20em;
+	section:last-of-type {
+		height: 75%;
 	}
 
-	p {
-		margin-bottom: 8em;
-	}
-	section div.btn {
-		margin-left: 48%;
+	body>header aside label {
+		font-size: 1.5em;
 	}
 
-	ul {
-		margin-top: 2em;
-		margin-left: 3em;
+	ul.moviecarousel li img {
+		height: 18em;
 	}
-	section.blob div {
-		margin-top: -12em;
-		margin-left: 2em;
-	  }
-	
-	  section div.blob2 {
-		margin-top: -16em;
-		margin-left: 70%;
-	  }
-	  section:last-of-type ul {
-		flex-direction: column;
+
+	section:last-of-type article p {
+		font-size: 1.3em;
 	}
-	  section:last-of-type p {
+
+	section:last-of-type>p {
 		font-size: 1.8em;
-		margin-left: .5em;
+	}
+
+	body div.blob:first-of-type {
+		left: 5em;
+		bottom: 15em;
 	}
 	
+	body div.blob:last-of-type {
+		right: 7em;
+		top: 30em;
+	}
+
+	body>header aside input[type="radio"]:checked+label {
+		color: var(--color-white);
+	}
+
+	body header>button {
+		font-size: 1.3em;
+		right: 1em;
+		top: 1em;
+	}
+}
+
+
+/********************************************
+*********************************************
+*******************DESKTOP+******************
+*********************************************
+********************************************/
+@media only screen and (min-width: 1201px) {
+	ul.moviecarousel {
+		display: flex;
+		gap: 1em;
+		overflow: auto;
+		width: 100%;
+		margin: 0 auto;
+		padding-left: 3em;
+	}
+	
+	ul.moviecarousel li img {
+		height: 23em;
+	}
+
+	section:last-of-type article p {
+		font-size: 1.5em;
+	}
+
+	section:last-of-type>p {
+		font-size: 2em;
+	}
+
+	body div.blob:first-of-type {
+		left: 2em;
+		top: 37em;
+	}
+	
+	body div.blob:last-of-type {
+		right: 7em;
+		top: 30em;
+	}
+
+	body>header aside input[type="radio"]:checked+label {
+		color: var(--color-white);
+	}
+
+	body>header aside input[type="radio"]:focus+label {
+		outline: var(--color-white) dashed 3px;
+	}
+
+	body header>button {
+		font-size: 1.4em;
+		right: 2em;
+		top: 2em;
+	}
+}
+
+
+
+
+
+/********************************************
+*********************************************
+***************BLOB ANIMATIE*****************
+*********************************************
+********************************************/
+@keyframes draaien {
+	0% {
+		transform: rotate(0turn);
+	}
+
+	100% {
+		transform: rotate(1turn);
+	}
+}
+
+@keyframes blob {
+	0% {
+		border-radius: 30% 50% 70% 30% / 40% 60% 80% 40%;
+	}
+
+	20% {
+		border-radius: 40% 60% 30% 60% / 50% 60% 30% 40%;
+	}
+
+	40% {
+		border-radius: 50% 40% 45% 40% / 55% 70% 20% 30%;
+	}
+
+	60% {
+		border-radius: 60% 40% 60% 35% / 50% 35% 65% 40%;
+	}
+
+	80% {
+		border-radius: 40% 60% 30% 40% / 20% 70% 30% 50%;
+	}
+
+	100% {
+		border-radius: 30% 50% 70% 30% / 40% 60% 80% 40%;
+	}
+}
+
+body div.blob {
+	width: 9em;
+	height: 9em;
+	background-color: var(--color-purple);
+	animation: blob 10s linear infinite paused, draaien 40s linear infinite paused;
+	z-index: -100;
+	animation-play-state: running;
+	position: absolute;
+}
+
+
+/********************************************
+*********************************************
+*************ANIMATIE HARTJE*****************
+*********************************************
+********************************************/
+@keyframes hartslag {
+	0% {
+		transform: scale(1);
+	}
+
+	5% {
+		transform: scale(.7);
+	}
+
+	10% {
+		transform: scale(1.2);
+	}
+
+	15% {
+		transform: scale(.7);
+	}
+
+	20% {
+		transform: scale(1.1);
+	}
+
+	25% {
+		transform: scale(.85);
+	}
+
+	30% {
+		transform: scale(1);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+main ul li.favoriet button svg {
+	animation-name: hartslag;
+	animation-duration: 2s;
+	animation-iteration-count: 1;
 }
