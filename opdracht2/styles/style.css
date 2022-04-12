@@ -25,6 +25,11 @@
 	--color-focus: red;
 }
 
+:root.darkmode {
+	--color-background: #292929;
+	--color-black: #ffffff;
+}
+
 body {
 	background-color: var(--color-background);
 	font-family: Arial, Helvetica, sans-serif;
@@ -100,8 +105,15 @@ body header>button {
 	color: var(--color-white);
 	background-color: var(--color-dark-purple);
 	position: absolute;
-	z-index: +100;
+	z-index: 100;
+	cursor: pointer;
 }
+
+body header>button:hover {
+	background-color: var(--color-darker-purple);
+}
+
+
 
 /********************************************
 *********************************************
@@ -262,32 +274,6 @@ section:last-of-type>p.geenfavo {
 }
 
 
-/********************************************
-*********************************************
-*******************DARKMODE******************
-*********************************************
-********************************************/
-:root body.darkmode {
-	--color-background: #292929;
-	--color-black: #ffffff;
-}
-
-:root body.lightmode {
-	--color-background:#ffffff;
-	--color-black:#000000;
-	--color-white:#ffffff;
-	--color-purple: #5A6BEF;
-	--color-dark-purple: #4c5ac7;
-	--color-darker-purple: #313c8a;
-	--color-focus: red;
-}
-
-@media (prefers-color-scheme: dark) {
-	:root {
-		--color-background: #292929;
-		--color-black: #ffffff;
-	}
-}
 
 /********************************************
 *********************************************
@@ -471,7 +457,7 @@ section:last-of-type>p.geenfavo {
 	}
 
 	body>header aside input[type="radio"]:focus+label {
-		outline: var(--color-white) dashed 3px;
+		border: var(--color-focus) dashed 3px;
 	}
 
 	body header>button {

@@ -75,7 +75,9 @@
   <summary>uitwerken bij afronden opdracht (voor week 8)</summary>
 
   ### Je uitkomst - karakteristiek screenshot(s):
-  <img src="readme-images/uitkomst.png" width="375px" alt="uitkomst opdracht 2">
+   <img src="readme-images/uitkomst.png" width="375px" alt="uitkomst opdracht 2">
+   <img src="readme-images/uitkomst-2.png" width="375px" alt="uitkomst opdracht 2">
+   <img src="readme-images/uitkomst-3.png" width="375px" alt="uitkomst opdracht 2">
 
 
   ### Dit ging goed/Heb ik geleerd: 
