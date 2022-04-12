@@ -79,13 +79,25 @@
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  Werken met breakpoitns ging erg goed. Ik had het nooit eerder gedaan, dus het was even nieuw, maar nu heb ik het wel onder de knie. Ik vind responsive design best lastig. Dus ik heb hier echt super veel van geleerd, waar ik erg blij mee ben :)
+  Werken met breakpoitns ging erg goed. Ik had het nooit eerder gedaan, dus het was even nieuw, maar nu heb ik het wel onder de knie. Ik vind responsive design best lastig. Dus ik heb hier echt super veel van geleerd, waar ik erg blij mee ben :) Ik heb een breakpoint gemaakt voor de telefoon, ipad en desktop+. Zo wilde ik er voor zorgen dat alles een fijne interface had. In de breakpoints heb ik alle specifieke dingen gezet, zoals fontsizes en grids etc. Buiten de beakpoints heb ik alle algemene dingen gezet die golden voor alles. 
 
-  <img src="readme-images/breakpoints.png" width="375px" alt="top">
+  <img src="readme-images/breakpoint-telefoon.png" width="375px" alt="top">
+  <img src="readme-images/breakpoint-ipad.png" width="375px" alt="top">
+  <img src="readme-images/breakpoint-desktop.png" width="375px" alt="top">
 
+  Voor de herkasing heb ik ook met betere selectoren geprobeerd te werken. Hiervoor was het best troepig en niet zo heel consistent. Dit heb ik geprobeerd beter aan te pakken. Zo wilde ik het duidelijker maken voor mijzelf.
+
+  <img src="readme-images/selector-oud.png" width="375px" alt="top">
+  <img src="readme-images/selector-nieuw.png" width="375px" alt="top">
 
   ### Dit was lastig/Is niet gelukt:
-  Ik had graag meer verschillende dingen willen toevoegen om alles te kunnen besturen. Bijvoorbeeld stemherkenning of met je vinger kunnen swipen. Dit is mij helaas niet gelukt door tijdsnood. Het enige wat ik nu heb is met de muis en met je toetsenbord. Ook is het niet gelukt om mijn design helemaal na te maken. Di/t vind ik best jammer, want ik vind mijn design best leuk.
+  Sinds de herkansing heb ik veel dingen extra kunnnen toevoegen. Ik had graag een microinteractie willen toevoegen op het verwijderen van de films met een fadeout animatie.
+  
+  <img src="readme-images/fadeout.png" width="375px" alt="top">
 
-  (Zie afbeelding 1, 2 en 3)
+   Dit is helaas niet gelukt. De animatie zou dan alleen moeten lopen als je op de verwijderknop zou drukken. Ik weet niet zo goed hoe je iets anders moet animeren buiten het knopje zelf om. Ik heb bijvoorbeeld wel een animatie bij de hartjesknoppen. Maar dit is alleen om de knop zelf te animeren en niet iets anders d.m.v een knop. Dit is iets wat ik in de toekomst nog wel zou willen leren.
+
+   <img src="readme-images/animatie-hartje.png" width="375px" alt="top">
+
+
 </details>
